@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&display=swap');
+
+:root {
+  color-scheme: light;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: #293044;
+  background: #fffdf7;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+.topbar { min-height: 76px; padding: 0 7vw; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #eee9dc; }
+.brand { color: #293044; font-size: 1.15rem; font-weight: 700; text-decoration: none; }
+.brand span { color: #f2a900; font-size: 1.4rem; margin-right: .4rem; }
+.topbar p, .composer p { color: #747888; font-size: .9rem; }
+main { max-width: 1200px; margin: 0 auto; padding: 54px 7vw 70px; }
+.composer { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding-bottom: 42px; border-bottom: 1px solid #eee9dc; }
+h1, h2, p { margin-top: 0; }
+h1 { margin-bottom: 8px; font-size: clamp(1.7rem, 3vw, 2.2rem); letter-spacing: -.04em; }
+.composer p { margin-bottom: 0; }
+#note-form { display: flex; gap: 10px; width: min(100%, 470px); }
+#new-note { min-width: 0; flex: 1; padding: 13px 15px; border: 1px solid #deded7; border-radius: 9px; font: inherit; background: white; }
+button { font: inherit; cursor: pointer; }
+#note-form button { padding: 0 18px; border: 0; border-radius: 9px; color: white; background: #39435c; font-weight: 600; }
+#note-form button:hover { background: #252e45; }
+.board-section { padding-top: 32px; }
+.board-heading { display: flex; align-items: center; gap: 12px; }
+h2 { margin-bottom: 0; font-size: 1.15rem; }
+.note-count { color: #8a8d98; font-size: .85rem; }
+.board { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 20px; margin-top: 24px; }
+.note-card { position: relative; min-height: 190px; padding: 24px 18px 18px; background: #fff0a8; border-radius: 3px 3px 14px 3px; box-shadow: 0 5px 14px #39435c13; transform: rotate(-1deg); }
+.note-card:nth-child(even) { background: #d9f3e5; transform: rotate(1deg); }
+.note-card:nth-child(3n) { background: #dceafa; }
+.note-card textarea { width: 100%; min-height: 145px; resize: vertical; border: 0; outline: 0; color: #34384a; background: transparent; font: 1.15rem/1.45 'Patrick Hand', 'Comic Sans MS', cursive; }
+.delete-button { position: absolute; top: 5px; right: 7px; width: 30px; height: 30px; border: 0; border-radius: 50%; color: #596071; background: transparent; font-size: 1.4rem; }
+.delete-button:hover, .delete-button:focus-visible { background: #00000012; }
+.empty-state { margin: 28px 0 0; padding: 36px 20px; border: 1px dashed #deded7; border-radius: 12px; color: #747888; text-align: center; }
+footer { padding: 20px; color: #8a8d98; text-align: center; font-size: .85rem; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+:focus-visible { outline: 3px solid #6f89d8; outline-offset: 3px; }
+@media (max-width: 700px) { .topbar { padding: 16px 6vw; align-items: flex-start; flex-direction: column; gap: 4px; } .topbar p { margin-bottom: 0; } main { padding: 35px 6vw 50px; } .composer { align-items: stretch; flex-direction: column; gap: 22px; } #note-form { width: 100%; } }

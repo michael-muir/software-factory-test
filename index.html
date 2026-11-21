@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff9e8">
+    <title>Post-it Board</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Post-it Board home"><span aria-hidden="true">▧</span> Post-it Board</a>
+      <p>Your thoughts, gathered in one place.</p>
+    </header>
+    <main>
+      <section class="composer" aria-labelledby="composer-title">
+        <div>
+          <h1 id="composer-title">Make a little note</h1>
+          <p>Jot it down now. You can edit it on the board.</p>
+        </div>
+        <form id="note-form">
+          <label class="visually-hidden" for="new-note">New note text</label>
+          <input id="new-note" name="note" type="text" maxlength="280" placeholder="Remember to…" required>
+          <button type="submit">Add note <span aria-hidden="true">＋</span></button>
+        </form>
+      </section>
+      <section class="board-section" aria-labelledby="board-title">
+        <div class="board-heading">
+          <h2 id="board-title">Your board</h2>
+          <span id="note-count" class="note-count" aria-live="polite"></span>
+        </div>
+        <p id="empty-state" class="empty-state">Your board is clear. Add a note to get started!</p>
+        <div id="board" class="board" aria-label="Your notes"></div>
+      </section>
+    </main>
+    <footer>Notes stay in this browser, on this device.</footer>
+  </body>
+</html>
